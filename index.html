@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLAMREDDY BROTHERS</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0a0a0c;
+            color: #ffffff;
+        }
+
+        /* NAVBAR */
+        header {
+            background: rgba(10, 10, 12, 0.95);
+            border-bottom: 2px solid #d4af37; /* Gold Border */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #fff, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,12,1)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cccccc;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-gold {
+            background: linear-gradient(45deg, #d4af37, #aa7c11);
+            color: #000000;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: #d4af37;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: #121216;
+            border: 1px solid #22222b;
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #888899;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: #0f0f13;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 550px;
+            margin: 0 auto;
+            background: #121216;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #22222b;
+        }
+
+        .input-group {
+            width: 100%;
+            padding: 14px 20px;
+            background: #1a1a22;
+            border: 1px solid #2a2a35;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 15px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .input-group:focus {
+            border-color: #d4af37;
+        }
+
+        textarea.input-group {
+            height: 120px;
+            resize: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a0a0c;
+            padding: 30px;
+            text-align: center;
+            color: #666677;
+            border-top: 1px solid #1a1a22;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">POLAMREDDY <span>BROTHERS</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h1>Welcome to <span>POLAMREDDY BROTHERS</span></h1>
+        <p>మేము నమ్మకానికి, నాణ్యతకు మరియు అంకితభావానికి మారుపేరు. మీ కలలను నిజం చేసే ప్రయాణంలో మేము మీకు తోడుగా ఉంటాము.</p>
+        <a href="#contact" class="btn-gold">Contact Us Today</a>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+                <i class="fa-solid fa-building-shield"></i>
+                <h3>Real Estate & Ventures</h3>
+                <p>నమ్మకమైన స్థలాలు, ఓపెన్ ప్లాట్లు మరియు ల్యాండ్ వెంచర్స్ లలో ఉత్తమమైన డీల్స్ అందిస్తాము.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <i class="fa-solid fa-wheat-awn"></i>
+                <h3>Agriculture & Aqua</h3>
+                <p>ఆధునిక పద్ధతులతో వ్యవసాయం మరియు అక్వా కల్చర్ రంగంలో వ్యాపార విస్తరణ.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <i class="fa-solid fa-truck-ramp-box"></i>
+                <h3>Logistics & Business</h3>
+                <p>రవాణా మరియు వివిధ రకాల బిజినెస్ మేనేజ్‌మెంట్ సేవలను సమర్థవంతంగా నిర్వహిస్తాము.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="section-title" style="margin-bottom: 40px;">Get In Touch</h2>
+        <div class="contact-form">
+            <input type="text" id="cust-name" class="input-group" placeholder="మీ పేరు (Your Name)">
+            <input type="text" id="cust-phone" class="input-group" placeholder="ఫోన్ నెంబర్ (Phone Number)">
+            <textarea id="cust-msg" class="input-group" placeholder="మీ సందేశం (Your Message)"></textarea>
+            <button class="btn-gold" style="width: 100%; border-radius: 8px;" onclick="handleSubmit()">Send Message</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 POLAMREDDY BROTHERS. All Rights Reserved. <br> Designed with ❤️ for Success.
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function handleSubmit() {
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const msg = document.getElementById('cust-msg').value.trim();
+
+            if(name === "" || phone === "") {
+                alert("దయచేసి మీ పేరు మరియు ఫోన్ నెంబర్ ఎంటర్ చేయండి!");
+                return;
+            }
+
+            alert("ధన్యవాదాలు " + name + "! పోలంరెడ్డి బ్రదర్స్ టీమ్ మిమ్మల్ని త్వరలోనే సంప్రదిస్తుంది. 🎉");
+            
+            document.getElementById('cust-name').value = "";
+            document.getElementById('cust-phone').value = "";
+            document.getElementById('cust-msg').value = "";
+        }
+    </script>
+
+</body>
+</html>
